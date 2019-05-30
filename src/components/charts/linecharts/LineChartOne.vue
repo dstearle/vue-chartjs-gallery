@@ -1,0 +1,54 @@
+<template>
+
+  <div class="container">
+      
+    <div class="row align-items-center justify-content-center">
+                    
+        <canvas id="myChart"></canvas>
+        
+    </div>
+    
+  </div>
+
+</template>
+
+<script>
+// Imports the different types of charts from the package";
+import Chart from "chart.js";
+export default {
+    methods: {
+        initializeChart() {
+            const ctx = document.getElementById('myChart').getContext('2d');
+            this.chart = new Chart(ctx, {
+                // The type of chart we want to create
+                type: 'line',
+                // The data for our dataset
+                data: {
+                    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                    datasets: [{
+                        label: 'My First dataset',
+                        backgroundColor: 'rgb(255, 99, 132)',
+                        borderColor: 'rgb(255, 99, 132)',
+                        data: [0, 10, 5, 2, 20, 30, 45]
+                    }]
+                },
+                // Configuration options go here
+                options: {}
+            })
+        }
+    },
+    mounted() {
+        this.initializeChart();
+    },
+    
+};
+</script>
+
+<style scoped>
+.gaugeStyle {
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+}
+</style>
