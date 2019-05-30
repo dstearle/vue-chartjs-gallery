@@ -2,7 +2,7 @@ import Home from './components/Home.vue';
 import Header from './components/Header.vue';
 
 // Imports for the lists
-import LineCharts from './components/charts/LineCharts.vue';
+import LineCharts from './components/charts/linecharts/LineChartsIndex.vue';
 // import ListTwo from './components/lists/ListTwo.vue';
 // import ListThree from './components/lists/ListThree.vue';
 // import ListFour from './components/lists/ListFour.vue';
