@@ -6,9 +6,9 @@
                        
         <router-link to="/lineCharts" tag="li"><button type="button" class="btn btn-outline-success">Line Charts</button></router-link>
 
-        <!-- <router-link to="/listTwo" tag="li"><button type="button" class="btn btn-outline-warning">List Two</button></router-link>
+        <router-link to="/barCharts" tag="li"><button type="button" class="btn btn-outline-warning">Bar Charts</button></router-link>
 
-        <router-link to="/listThree" tag="li"><button type="button" class="btn btn-outline-danger">List Three</button></router-link>
+        <!--<router-link to="/listThree" tag="li"><button type="button" class="btn btn-outline-danger">List Three</button></router-link>
 
         <router-link to="/listFour" tag="li"><button type="button" class="btn btn-outline-info">List Four</button></router-link>
 
