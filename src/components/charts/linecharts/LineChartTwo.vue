@@ -34,6 +34,7 @@ export default {
                 type: 'line',
                 // The data for our dataset
                 data: {
+                    // Labels for the X axis
                     labels: [
                         'January', 'February', 'March', 'April', 
                         'May', 'June', 'July', 'August',
@@ -91,13 +92,6 @@ export default {
                                 min: 0,
                                 stepSize: 10
                             },
-                            position: "left",
-                            scaleLabel: {
-                                display: false,
-                                labelString: "NPS Score",
-                                fontSize: 16,
-                                fontFamily: "Open Sans"
-                            }
 
                         }]
                     }
@@ -114,12 +108,5 @@ export default {
 </script>
 
 <style scoped>
-
-.gaugeStyle {
-    position: absolute;
-    text-align: center;
-    left: 0;
-    right: 0;
-}
 
 </style>
