@@ -51,6 +51,11 @@ export default {
                 options: {
                     maintainAspectRatio: false,
                     responsive: true,
+                    // Configures settings fo the legend
+                    legend: {
+                        display: false
+                    },
+                    // Configures the X and Y axes
                     scales:{
                         // Allows you to customize the X axis
                         xAxes: [{
