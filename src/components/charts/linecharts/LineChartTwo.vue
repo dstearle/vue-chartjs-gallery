@@ -4,11 +4,11 @@
 
       <div class="card bg-light">
 
-            <h5 class="card-header">Basic Line Chart</h5>
+            <h5 class="card-header">Multiple Line Chart</h5>
 
             <div class="card-body p-5">
 
-                <canvas id="myChart" height="300px" width="800px"></canvas>
+                <canvas id="myChart2" height="300px" width="800px"></canvas>
 
             </div>
       
@@ -28,7 +28,7 @@ export default {
     methods: {
         initializeChart() {
 
-            const ctx = document.getElementById('myChart').getContext('2d');
+            const ctx = document.getElementById('myChart2').getContext('2d');
             this.chart = new Chart(ctx, {
                 // The type of chart we want to create
                 type: 'line',
@@ -39,12 +39,29 @@ export default {
                         'May', 'June', 'July', 'August',
                         'September', 'October', 'November', 'December'
                     ],
-                    datasets: [{
-                        label: 'Compsognathus Population',
-                        backgroundColor: 'rgb(131, 244, 66, 0.3)',
-                        borderColor: 'rgb(131, 244, 66)',
-                        data: [0, 10, 5, 2, 20, 30, 45, 25, 38, 60, 65, 89]
-                    }]
+                    datasets: [
+                        // First set of data for line one (green)
+                        {
+                            label: 'Compsognathus Population',
+                            backgroundColor: 'rgb(131, 244, 66, 0.3)',
+                            borderColor: 'rgb(131, 244, 66)',
+                            data: [0, 10, 5, 2, 20, 30, 45, 25, 38, 60, 65, 89]
+                        },
+                        // Second set of data for line two (orange)
+                        {
+                            label: 'Velociraptor Population',
+                            backgroundColor: 'rgb(255, 153, 0, 0.3)',
+                            borderColor: 'rgb(255, 153, 0)',
+                            data: [0, 3, 9, 23, 37, 18, 32, 45, 60, 28, 36, 45]
+                        },
+                        // Third set of data for line two (yellow)
+                        {
+                            label: 'Parasaurolophus Population',
+                            backgroundColor: 'rgb(255, 255, 26, 0.3)',
+                            borderColor: 'rgb(255, 255, 26)',
+                            data: [30, 36, 50, 42, 68, 53, 60, 30, 48, 22, 15, 12]
+                        }
+                    ]
                 },
                 // Configure your chart options here
                 options: {
