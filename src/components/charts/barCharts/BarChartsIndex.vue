@@ -4,7 +4,7 @@
 
         <h2 class="py-5">Bar Charts</h2>
 
-        <!-- <app-chart-one></app-chart-one> -->
+        <app-chart-one></app-chart-one>
 
         <br>
 
@@ -16,14 +16,14 @@
 
 <script>
 
-// import ChartOne from './BarChartOne.vue';
+import ChartOne from './BarChartOne.vue';
 // import ChartTwo from './LineChartTwo.vue';
 
 export default {
 
     components: {
           
-        // appChartOne: ChartOne,
+        appChartOne: ChartOne,
         // appChartTwo: ChartTwo,
           
     },
