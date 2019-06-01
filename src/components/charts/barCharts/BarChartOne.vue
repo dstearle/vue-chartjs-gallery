@@ -4,7 +4,7 @@
 
       <div class="card bg-light">
 
-            <h5 class="card-header">Basic Line Chart</h5>
+            <h5 class="card-header">Basic Bar Chart</h5>
 
             <div class="card-body p-5">
 
@@ -31,20 +31,24 @@ export default {
             const ctx = document.getElementById('myChart').getContext('2d');
             this.chart = new Chart(ctx, {
                 // The type of chart we want to create
-                type: 'line',
+                type: 'bar',
                 // The data for our dataset
                 data: {
                     // Labels for the X axis
                     labels: [
-                        'January', 'February', 'March', 'April', 
-                        'May', 'June', 'July', 'August',
-                        'September', 'October', 'November', 'December'
+                        'Compsognathus', 'Dilophosaurus', 'Velociraptor', 'Carnotaurus', 
+                        'T-Rex', 
                     ],
                     datasets: [{
                         label: 'Compsognathus Population',
-                        backgroundColor: 'rgb(131, 244, 66, 0.3)',
-                        borderColor: 'rgb(131, 244, 66)',
-                        data: [0, 10, 5, 2, 20, 30, 45, 25, 38, 60, 65, 89]
+                        backgroundColor: [
+                            'rgb(131, 244, 66, 0.6)',
+                            'rgb(255, 102, 153, 0.6)',
+                            'rgb(255, 153, 0, 0.6)',
+                            'rgb(255, 0, 0, 0.6)',
+                            'rgb(64, 64, 64, 0.6)',
+                        ],
+                        data: [89, 66, 42, 28, 12]
                     }]
                 },
                 // Configure your chart options here
@@ -54,6 +58,11 @@ export default {
                     // Configures settings fo the legend
                     legend: {
                         display: false
+                    },
+                    // Configures title above chart
+                    title: {
+                        display: true,
+                        text: 'Predicted carnivore population of Isla Sorna (2019)'
                     },
                     // Configures the X and Y axes
                     scales:{
