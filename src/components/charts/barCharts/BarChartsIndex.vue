@@ -8,7 +8,7 @@
 
         <br>
 
-        <!-- <app-chart-two></app-chart-two> -->
+        <app-chart-two></app-chart-two>
 
     </div>
 
@@ -17,14 +17,14 @@
 <script>
 
 import ChartOne from './BarChartOne.vue';
-// import ChartTwo from './LineChartTwo.vue';
+import ChartTwo from './BarChartTwo.vue';
 
 export default {
 
     components: {
           
         appChartOne: ChartOne,
-        // appChartTwo: ChartTwo,
+        appChartTwo: ChartTwo,
           
     },
     

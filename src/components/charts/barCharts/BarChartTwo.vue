@@ -4,11 +4,11 @@
 
       <div class="card bg-light">
 
-            <h5 class="card-header">Basic Bar Chart</h5>
+            <h5 class="card-header">Grouped Bar Chart</h5>
 
             <div class="card-body p-5">
 
-                <canvas id="myChart" height="300px" width="800px"></canvas>
+                <canvas id="myChart2" height="300px" width="800px"></canvas>
 
             </div>
       
@@ -28,7 +28,7 @@ export default {
     methods: {
         initializeChart() {
 
-            const ctx = document.getElementById('myChart').getContext('2d');
+            const ctx = document.getElementById('myChart2').getContext('2d');
             this.chart = new Chart(ctx, {
                 // The type of chart we want to create
                 type: 'bar',
@@ -36,20 +36,20 @@ export default {
                 data: {
                     // Labels for the X axis
                     labels: [
-                        'Compsognathus', 'Dilophosaurus', 'Velociraptor', 'Carnotaurus', 
-                        'T-Rex', 
+                        '1993', '1997', '2001', '2015',
                     ],
-                    datasets: [{
-                        label: 'predicted population',
-                        backgroundColor: [
-                            'rgb(131, 244, 66, 0.6)',
-                            'rgb(255, 102, 153, 0.6)',
-                            'rgb(255, 153, 0, 0.6)',
-                            'rgb(255, 0, 0, 0.6)',
-                            'rgb(64, 64, 64, 0.6)',
-                        ],
-                        data: [89, 66, 42, 28, 12]
-                    }]
+                    datasets: [
+                        {
+                            label: "InGen",
+                            backgroundColor: "rgb(51, 102, 255)",
+                            data: [76,22,68,97]
+                        }, 
+                        {
+                            label: "Biosyn",
+                            backgroundColor: "rgb(64, 64, 64,)",
+                            data: [21,52,35,66]
+                        }
+                    ]
                 },
                 // Configure your chart options here
                 options: {
@@ -62,7 +62,7 @@ export default {
                     // Configures title above chart
                     title: {
                         display: true,
-                        text: 'Predicted carnivore population of Isla Sorna (2019)'
+                        text: 'Stock worth (millions)'
                     },
                     // Configures the X and Y axes
                     scales:{
@@ -87,7 +87,7 @@ export default {
                                 padding: 15,
                                 max: 100,
                                 min: 0,
-                                stepSize: 10
+                                stepSize: 20
                             },
                         }]
                     }
