@@ -63,7 +63,7 @@ export default {
                     // Configures title above chart
                     title: {
                         display: true,
-                        text: 'Stock worth (millions)'
+                        text: 'Company Stock Worth (millions)'
                     },
                     // Configures the X and Y axes
                     scales:{
