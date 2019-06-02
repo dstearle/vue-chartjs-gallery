@@ -4,11 +4,11 @@
 
       <div class="card bg-light">
 
-            <h5 class="card-header">Basic Bar Chart</h5>
+            <h5 class="card-header">Horizontal Bar Chart</h5>
 
             <div class="card-body p-5">
 
-                <canvas id="myChart" height="300px" width="800px"></canvas>
+                <canvas id="myChart3" height="300px" width="800px"></canvas>
 
             </div>
       
@@ -28,10 +28,10 @@ export default {
     methods: {
         initializeChart() {
 
-            const ctx = document.getElementById('myChart').getContext('2d');
+            const ctx = document.getElementById('myChart3').getContext('2d');
             this.chart = new Chart(ctx, {
                 // The type of chart we want to create
-                type: 'bar',
+                type: 'horizontalBar',
                 // The data for our dataset
                 data: {
                     // Labels for the X axis
