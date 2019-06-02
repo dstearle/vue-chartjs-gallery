@@ -57,7 +57,8 @@ export default {
                     responsive: true,
                     // Configures settings fo the legend
                     legend: {
-                        display: false
+                        display: true,
+                        position: "right"
                     },
                     // Configures title above chart
                     title: {
