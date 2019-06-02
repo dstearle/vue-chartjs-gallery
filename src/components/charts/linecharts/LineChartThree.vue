@@ -69,18 +69,34 @@ export default {
 
                         }],
                         // Allows you to customize the Y axis
-                        yAxes: [{
-
-                            gridLines: {
-                                tickMarkLength: 0,
+                        yAxes: [
+                            // First Y Axis
+                            {
+                                position: 'left',
+                                gridLines: {
+                                    tickMarkLength: 0,
+                                },
+                                ticks: {
+                                    padding: 15,
+                                    max: 100,
+                                    min: 0,
+                                    stepSize: 10
+                                },
                             },
-                            ticks: {
-                                padding: 15,
-                                max: 100,
-                                min: 0,
-                                stepSize: 10
-                            },
-                        }]
+                            // Second Y Axis
+                            {
+                                position: 'right',
+                                gridLines: {
+                                    tickMarkLength: 0,
+                                },
+                                ticks: {
+                                    padding: 15,
+                                    max: 100,
+                                    min: 0,
+                                    stepSize: 10
+                                },
+                            }
+                        ]
                     }
                 }
             })

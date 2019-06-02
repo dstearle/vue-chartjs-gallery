@@ -66,6 +66,7 @@ export default {
                 },
                 // Configure your chart options here
                 options: {
+                    drawBorder: true,
                     maintainAspectRatio: false,
                     responsive: true,
                     // Configures settings fo the legend
