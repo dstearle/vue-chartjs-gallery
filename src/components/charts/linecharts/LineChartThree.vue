@@ -73,6 +73,11 @@ export default {
                             // First Y Axis
                             {
                                 position: 'left',
+                                scaleLabel: {
+                                    display: true,
+                                    fontStyle: 'bold',
+                                    labelString: 'Invasive Population'
+                                },
                                 gridLines: {
                                     tickMarkLength: 0,
                                 },
@@ -86,6 +91,11 @@ export default {
                             // Second Y Axis
                             {
                                 position: 'right',
+                                scaleLabel: {
+                                    display: true,
+                                    fontStyle: 'bold',
+                                    labelString: 'Child Mortality Rate'
+                                },
                                 gridLines: {
                                     tickMarkLength: 0,
                                 },
