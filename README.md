@@ -14,3 +14,7 @@
 - To run the application use (npm run serve).
 
 <br>
+
+<strong>Source :</strong>
+
+- gaugeJS https://www.chartjs.org/
