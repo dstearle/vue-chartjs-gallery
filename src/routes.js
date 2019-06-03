@@ -4,7 +4,7 @@ import Header from './components/Header.vue';
 // Imports for the lists
 import LineCharts from './components/charts/linecharts/LineChartsIndex.vue';
 import BarCharts from './components/charts/barCharts/BarChartsIndex.vue';
-// import ListThree from './components/lists/ListThree.vue';
+import PieCharts from './components/charts/pieCharts/PieChartsIndex.vue';
 // import ListFour from './components/lists/ListFour.vue';
 // import ListFive from './components/lists/ListFive.vue';
 
@@ -19,7 +19,7 @@ export const routes = [
 
     { path: '/barCharts', component: BarCharts},
 
-    // { path: '/listThree', component: ListThree},
+    { path: '/pieCharts', component: PieCharts},
 
     // { path: '/listFour', component: ListFour},
 
