@@ -88,6 +88,14 @@ export default {
                         xAxes: [{
 
                             gridLines: {
+                                // Thickness and color for vertical grid lines
+                                lineWidth: [3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+                                color: [
+                                        '#73737a', '#73737a', '#73737a', '#73737a',
+                                        '#73737a', '#73737a', '#73737a', '#73737a',
+                                        '#73737a', '#73737a', '#73737a', '#73737a',
+                                ],
+                                // Size of tick marks on the axis
                                 tickMarkLength: 0,
                             },
                             ticks: {
@@ -97,8 +105,15 @@ export default {
                         }],
                         // Allows you to customize the Y axis
                         yAxes: [{
-
+                            
                             gridLines: {
+                                // Thickness and color for horizontal grid lines
+                                lineWidth: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+                                color: [
+                                        '#73737a', '#73737a', '#73737a', '#73737a',
+                                        '#73737a', '#73737a', '#73737a', '#73737a',
+                                        '#73737a', '#73737a', '#73737a', '#73737a',
+                                ],
                                 tickMarkLength: 0,
                             },
                             ticks: {
