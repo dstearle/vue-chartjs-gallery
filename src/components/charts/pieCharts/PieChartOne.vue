@@ -31,21 +31,17 @@ export default {
             const ctx = document.getElementById('myChart').getContext('2d');
             this.chart = new Chart(ctx, {
                 // The type of chart we want to create
-                type: 'line',
+                type: 'pie',
                 // The data for our dataset
                 data: {
-                    // Labels for the X axis
+                    // Labels for the pie chart
                     labels: [
-                        'January', 'February', 'March', 'April', 
-                        'May', 'June', 'July', 'August',
-                        'September', 'October', 'November', 'December'
+                        'Stegosaurs', 'Camarasaurus', 'Iguanodon', 'Proceratorsaurus', 'Metriocanthosaurus' 
                     ],
                     datasets: [{
-                        label: 'Compsognathus Population',
-                        backgroundColor: 'rgb(131, 244, 66, 0.3)',
-                        borderColor: 'rgb(131, 244, 66)',
-                        data: [0, 10, 5, 2, 20, 30, 45, 25, 38, 60, 65, 89]
-                    }]
+                        data: [30, 18, 42, 12, 8],
+                        backgroundColor: ["#009900", "#e6e600","#8c8c8c","#660066","#ff9900"],
+                    }],
                 },
                 // Configure your chart options here
                 options: {
@@ -53,35 +49,9 @@ export default {
                     responsive: true,
                     // Configures settings fo the legend
                     legend: {
-                        display: false
+                        display: true,
+                        position: "left"
                     },
-                    // Configures the X and Y axes
-                    scales:{
-                        // Allows you to customize the X axis
-                        xAxes: [{
-
-                            gridLines: {
-                                tickMarkLength: 0,
-                            },
-                            ticks: {
-                                padding: 15,
-                            }
-
-                        }],
-                        // Allows you to customize the Y axis
-                        yAxes: [{
-
-                            gridLines: {
-                                tickMarkLength: 0,
-                            },
-                            ticks: {
-                                padding: 15,
-                                max: 100,
-                                min: 0,
-                                stepSize: 10
-                            },
-                        }]
-                    }
                 }
             })
         }
