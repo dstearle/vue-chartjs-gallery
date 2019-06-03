@@ -44,6 +44,9 @@ export default {
                         // First set of data for line one (green)
                         {
                             label: 'Compsognathus Population',
+                            pointStyle: 'circle',
+                            radius: 6,
+                            hoverRadius: 8,
                             backgroundColor: 'rgb(131, 244, 66, 0.3)',
                             borderColor: 'rgb(131, 244, 66)',
                             data: [0, 10, 5, 2, 20, 30, 45, 25, 38, 60, 65, 89]
@@ -51,6 +54,9 @@ export default {
                         // Second set of data for line two (orange)
                         {
                             label: 'Velociraptor Population',
+                            pointStyle: 'triangle',
+                            radius: 6,
+                            hoverRadius: 8,
                             backgroundColor: 'rgb(255, 153, 0, 0.3)',
                             borderColor: 'rgb(255, 153, 0)',
                             data: [0, 3, 9, 23, 37, 18, 32, 45, 60, 28, 36, 45]
@@ -58,6 +64,9 @@ export default {
                         // Third set of data for line two (yellow)
                         {
                             label: 'Parasaurolophus Population',
+                            pointStyle: 'rect',
+                            radius: 6,
+                            hoverRadius: 8,
                             backgroundColor: 'rgb(255, 255, 26, 0.3)',
                             borderColor: 'rgb(255, 255, 26)',
                             data: [30, 36, 50, 42, 68, 53, 60, 30, 48, 22, 15, 12]
