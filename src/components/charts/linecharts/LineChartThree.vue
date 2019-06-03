@@ -59,7 +59,7 @@ export default {
                     scales:{
                         // Allows you to customize the X axis
                         xAxes: [{
-
+                            
                             gridLines: {
                                 tickMarkLength: 0,
                             },
