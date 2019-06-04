@@ -8,11 +8,11 @@
 
         <br>
 
-        <!-- <app-chart-two></app-chart-two>
+        <app-chart-two></app-chart-two>
 
         <br>
 
-        <app-chart-three></app-chart-three> -->
+        <!-- <app-chart-three></app-chart-three> -->
 
     </div>
 
@@ -21,7 +21,7 @@
 <script>
 
 import ChartOne from './PieChartOne.vue';
-// import ChartTwo from './LineChartTwo.vue';
+import ChartTwo from './PieChartTwo.vue';
 // import ChartThree from './LineChartThree.vue';
 
 export default {
@@ -29,7 +29,7 @@ export default {
     components: {
           
         appChartOne: ChartOne,
-        // appChartTwo: ChartTwo,
+        appChartTwo: ChartTwo,
         // appChartThree: ChartThree,
 
     },
