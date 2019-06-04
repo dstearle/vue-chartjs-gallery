@@ -139,8 +139,8 @@ export default {
 
 <style scoped>
 
-canvas {
+/* canvas {
    background-color: rgba(47, 152, 208, 0.1);
-}
+} */
 
 </style>
