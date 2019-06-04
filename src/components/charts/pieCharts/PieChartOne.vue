@@ -40,7 +40,7 @@ export default {
                     ],
                     datasets: [{
                         data: [30, 18, 42, 12, 8],
-                        backgroundColor: ["#009900", "#e6e600","#8c8c8c","#660066","#ff9900"],
+                        backgroundColor: ["#009900", "#ffff66","#8c8c8c","#660066","#ff9900"],
                     }],
                 },
                 // Configure your chart options here

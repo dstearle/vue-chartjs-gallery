@@ -36,11 +36,11 @@ export default {
                 data: {
                     // Labels for the pie chart
                     labels: [
-                        'Stegosaurs', 'Camarasaurus', 'Iguanodon', 'Proceratorsaurus', 'Metriocanthosaurus' 
+                        'Securtiy', 'Entertainment', 'Research' 
                     ],
                     datasets: [{
-                        data: [30, 18, 42, 12, 8],
-                        backgroundColor: ["#009900", "#e6e600","#8c8c8c","#660066","#ff9900"],
+                        data: [30, 18, 42],
+                        backgroundColor: ["#ff3300", "#3399ff","#66ffcc"],
                     }],
                 },
                 // Configure your chart options here
@@ -50,12 +50,12 @@ export default {
                     // Configures settings fo the legend
                     legend: {
                         display: true,
-                        position: "right"
+                        position: "top"
                     },
                     title: {
                         display: true,
                         position: "top",
-                        // text: 'Est. Population of Isla Muerta (1997)'
+                        text: 'Division Funding for 2019'
                     }
                 }
             })
