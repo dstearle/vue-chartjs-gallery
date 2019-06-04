@@ -31,7 +31,7 @@ export default {
             const ctx = document.getElementById('myChart2').getContext('2d');
             this.chart = new Chart(ctx, {
                 // The type of chart we want to create
-                type: 'pie',
+                type: 'doughnut',
                 // The data for our dataset
                 data: {
                     // Labels for the pie chart
@@ -50,8 +50,13 @@ export default {
                     // Configures settings fo the legend
                     legend: {
                         display: true,
-                        position: "left"
+                        position: "right"
                     },
+                    title: {
+                        display: true,
+                        position: "top",
+                        // text: 'Est. Population of Isla Muerta (1997)'
+                    }
                 }
             })
         }
