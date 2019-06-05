@@ -31,7 +31,7 @@ export default {
             const ctx = document.getElementById('myChart3').getContext('2d');
             this.chart = new Chart(ctx, {
                 // The type of chart we want to create
-                type: 'doughnut',
+                type: 'polarArea',
                 // The data for our dataset
                 data: {
                     // Labels for the pie chart
