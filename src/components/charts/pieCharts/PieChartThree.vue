@@ -50,12 +50,12 @@ export default {
                     // Configures settings fo the legend
                     legend: {
                         display: true,
-                        position: "right"
+                        position: "bottom"
                     },
                     title: {
                         display: true,
                         position: "top",
-                        // text: 'Est. Population of Isla Muerta (1997)'
+                        text: 'Est. Population of Isla Muerta (1997)'
                     }
                 }
             })
