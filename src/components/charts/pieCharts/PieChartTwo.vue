@@ -55,7 +55,7 @@ export default {
                     title: {
                         display: true,
                         position: "top",
-                        text: 'Division Funding for 2019'
+                        text: 'InGen Division Funding for 2019'
                     }
                 }
             })
