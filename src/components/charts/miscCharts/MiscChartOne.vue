@@ -8,7 +8,7 @@
 
             <div class="card-body p-5">
 
-                <canvas id="myChart3" height="300px" width="800px"></canvas>
+                <canvas id="myChart" height="300px" width="800px"></canvas>
 
             </div>
       
@@ -28,20 +28,34 @@ export default {
     methods: {
         initializeChart() {
 
-            const ctx = document.getElementById('myChart3').getContext('2d');
+            const ctx = document.getElementById('myChart').getContext('2d');
             this.chart = new Chart(ctx, {
                 // The type of chart we want to create
-                type: 'polarArea',
+                type: 'radar',
                 // The data for our dataset
                 data: {
                     // Labels for the pie chart
                     labels: [
-                        'Stegosaurs', 'Camarasaurus', 'Iguanodon', 'Proceratorsaurus', 'Metriocanthosaurus' 
+                        'North America', 'Europe', 'Asia', 'South America', 'Africa' 
                     ],
-                    datasets: [{
-                        data: [30, 18, 42, 12, 8],
-                        backgroundColor: ["#009900", "#e6e600","#8c8c8c","#660066","#ff9900"],
-                    }],
+                    datasets: [
+                        // Dataset for 1997
+                        {
+                            data: [55, 8, 22, 4, 8],
+                            fill: true,
+                            backgroundColor: "rgba(179,181,198,0.2)",
+                            borderColor: "rgba(179,181,198,1)",
+                            
+                        },
+                        // Dataset for 2015
+                        {
+                            data: [30, 18, 42, 12, 8],
+                            fill: true,
+                            backgroundColor: "rgba(179,181,198,0.2)",
+                            borderColor: "rgba(179,181,198,1)",
+                            
+                        },
+                    ],
                 },
                 // Configure your chart options here
                 options: {
@@ -50,12 +64,12 @@ export default {
                     // Configures settings fo the legend
                     legend: {
                         display: true,
-                        position: "bottom"
+                        position: "right"
                     },
                     title: {
                         display: true,
                         position: "top",
-                        text: 'Est. Population of Isla Muerta (1997)'
+                        text: 'Park Visitor Representation (1997 & 2015)'
                     }
                 }
             })
