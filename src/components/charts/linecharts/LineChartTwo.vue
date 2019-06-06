@@ -84,6 +84,7 @@ export default {
                     },
                     // Configures settings for the hover tooltips
                     tooltips: {
+                        mode: 'index',
                         backgroundColor: "#ffffff",
                         titleFontColor: "#000000",
                         bodyFontColor: "#000000",
