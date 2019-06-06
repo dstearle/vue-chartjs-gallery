@@ -10,9 +10,9 @@
 
         <router-link to="/pieCharts" tag="li"><button type="button" class="btn btn-outline-danger">Pie Charts</button></router-link>
 
-        <!--<router-link to="/listFour" tag="li"><button type="button" class="btn btn-outline-info">List Four</button></router-link>
+        <router-link to="/miscCharts" tag="li"><button type="button" class="btn btn-outline-info">Misc Charts</button></router-link>
 
-        <router-link to="/listFive" tag="li"><button type="button" class="btn btn-outline-primary">List Five</button></router-link>
+        <!--<router-link to="/listFive" tag="li"><button type="button" class="btn btn-outline-primary">List Five</button></router-link>
 
         <router-link to="/listSix" tag="li"><button type="button" class="btn btn-outline-dark">List Six</button></router-link> -->
                                
