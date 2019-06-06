@@ -43,16 +43,18 @@ export default {
                         {
                             data: [55, 8, 22, 4, 8],
                             fill: true,
-                            backgroundColor: "rgba(179,181,198,0.2)",
-                            borderColor: "rgba(179,181,198,1)",
+                            backgroundColor: "rgba(255, 0, 0, 0.2)",
+                            borderColor: "rgba(255, 0, 0)",
+                            label: "1997"
                             
                         },
                         // Dataset for 2015
                         {
                             data: [30, 18, 42, 12, 8],
                             fill: true,
-                            backgroundColor: "rgba(179,181,198,0.2)",
-                            borderColor: "rgba(179,181,198,1)",
+                            backgroundColor: "rgba(0, 102, 255, 0.2)",
+                            borderColor: "rgba(0, 102, 255)",
+                            label: "2015"
                             
                         },
                     ],
