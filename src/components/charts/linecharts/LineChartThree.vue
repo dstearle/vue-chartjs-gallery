@@ -29,6 +29,10 @@ export default {
         initializeChart() {
 
             const ctx = document.getElementById('myChart3').getContext('2d');
+            let gradientStroke = ctx.createLinearGradient(500, 0, 100, 0);
+                gradientStroke.addColorStop(0, "#80b6f4");
+                gradientStroke.addColorStop(1, "#f49080");
+
             this.chart = new Chart(ctx, {
                 // The type of chart we want to create
                 type: 'line',
@@ -42,7 +46,7 @@ export default {
                     ],
                     datasets: [{
                         label: 'Compsognathus Population',
-                        backgroundColor: 'rgb(131, 244, 66, 0.3)',
+                        backgroundColor: gradientStroke,
                         borderColor: 'rgb(131, 244, 66)',
                         data: [0, 10, 5, 2, 20, 30, 45, 25, 38, 60, 65, 89]
                     }]
