@@ -29,9 +29,11 @@ export default {
         initializeChart() {
 
             const ctx = document.getElementById('myChart3').getContext('2d');
-            let gradientStroke = ctx.createLinearGradient(500, 0, 100, 0);
-                gradientStroke.addColorStop(0, "#80b6f4");
-                gradientStroke.addColorStop(1, "#f49080");
+            // Creates the gradient for the fill background
+            let gradientStroke = ctx.createLinearGradient(0, 250, 0, 100);
+                // More color stops can be added
+                gradientStroke.addColorStop(0, "rgb(131, 244, 66, 0.3)");
+                gradientStroke.addColorStop(1, "rgb(131, 244, 66, 0.8)");
 
             this.chart = new Chart(ctx, {
                 // The type of chart we want to create
