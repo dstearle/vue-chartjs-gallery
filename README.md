@@ -13,6 +13,11 @@
 - To install vue-chartjs you can install the node package with (npm install vue-chartjs chart.js --save). Link for reference https://vue-chartjs.org/guide/#npm.
 - To run the application use (npm run serve).
 
+<strong>References for styling :</strong>
+
+- https://hackernoon.com/creating-stunning-charts-with-vue-js-and-chart-js-28af584adc0a
+- https://blog.vanila.io/chart-js-tutorial-how-to-make-gradient-line-chart-af145e5c92f9
+
 <br>
 
 <strong>Source :</strong>
