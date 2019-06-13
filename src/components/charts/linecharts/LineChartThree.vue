@@ -113,6 +113,12 @@ export default {
                                 },
                             }
                         ]
+                    },
+
+                    tooltips: {
+
+                        // Disable the default tooltips
+                        enabled: false,
                     }
                 }
             })
