@@ -89,7 +89,7 @@ export default {
                         titleFontColor: "#000000",
                         bodyFontColor: "#000000",
                         borderColor: "rgba(0, 102, 255)",
-                        borderWidth: 3
+                        borderWidth: 3,
                     },
                     // Configures the X and Y axes
                     scales:{

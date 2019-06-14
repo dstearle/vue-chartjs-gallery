@@ -103,8 +103,9 @@ export default {
 
                                 var innerHtml = '<thead>';
 
+                                // Sets the html for the title
                                 titleLines.forEach(function(title) {
-                                    innerHtml += '<tr><th>' + title + '</th></tr>';
+                                    innerHtml += '<div><h4>' + title + '</h4></div>';
                                 });
                                 innerHtml += '</thead><tbody>';
 
@@ -133,14 +134,9 @@ export default {
                             tooltipEl.style.position = "absolute";
                             // Sets background color for the tooltip area
                             tooltipEl.style.backgroundColor = "white";
-                            tooltipEl.style.left =
-                                position.left +
-                                window.pageXOffset +
-                                tooltipModel.caretX +
-                                tooltipModel.caretPadding +
-                                "px";
-                            tooltipEl.style.top =
-                                position.top + window.pageYOffset + tooltipModel.caretY + "px";
+                            tooltipEl.style.caretSize = 5;
+                            tooltipEl.style.left = position.left + window.pageXOffset + tooltipModel.caretX + 'px';
+                            tooltipEl.style.top = position.top + window.pageYOffset + tooltipModel.caretY + 'px';
                             tooltipEl.style.fontFamily = tooltipModel._bodyFontFamily;
                             tooltipEl.style.fontSize = tooltipModel.bodyFontSize + "px";
                             tooltipEl.style.fontStyle = tooltipModel._bodyFontStyle;
@@ -151,12 +147,6 @@ export default {
                             tooltipEl.style.border = "3px solid rgb(131, 244, 66)";
                             // Rounds the corners of the tooltip area
                             tooltipEl.style.borderRadius = "20px";
-                            // Gives the tooltip box a shadow
-                            tooltipEl.style.webkitBoxShadow =
-                                "1px 5px 5px 0px rgba(236, 236, 232, 1)";
-                            tooltipEl.style.mozBoxShadow =
-                                "1px 5px 5px 0px rgba(236, 236, 232, 1)";
-                            tooltipEl.style.boxShadow = "1px 5px 5px 0px rgba(236, 236, 232, 1)";
                         }
                     },
                     // Configures the X and Y axes
