@@ -126,8 +126,12 @@ export default {
                             var position = this._chart.canvas.getBoundingClientRect();
 
                             // Display, position, and set styles for font
+                            // This is where you will do the actual customization for the tooltips
+
+                            // Sets opacity for the whole tooltip
                             tooltipEl.style.opacity = 1;
                             tooltipEl.style.position = "absolute";
+                            // Sets background color for the tooltip area
                             tooltipEl.style.backgroundColor = "white";
                             tooltipEl.style.left =
                                 position.left +
@@ -143,8 +147,11 @@ export default {
                             tooltipEl.style.padding =
                                 tooltipModel.yPadding + "px " + tooltipModel.xPadding + "px";
                             tooltipEl.style.pointerEvents = "none";
+                            // Sets the width and color of the toolips border
                             tooltipEl.style.border = "3px solid rgb(131, 244, 66)";
+                            // Rounds the corners of the tooltip area
                             tooltipEl.style.borderRadius = "20px";
+                            // Gives the tooltip box a shadow
                             tooltipEl.style.webkitBoxShadow =
                                 "1px 5px 5px 0px rgba(236, 236, 232, 1)";
                             tooltipEl.style.mozBoxShadow =
