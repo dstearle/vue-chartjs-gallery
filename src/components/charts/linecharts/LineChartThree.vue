@@ -109,13 +109,14 @@ export default {
                                 });
                                 innerHtml += '</thead><tbody>';
 
+                                // Sets the html for body
                                 bodyLines.forEach(function(body, i) {
                                     var colors = tooltipModel.labelColors[i];
                                     var style = 'background: ' + colors.backgroundColor;
                                     style += '; border-color: ' + colors.borderColor;
                                     style += '; border-width: 2px';
                                     var span = '<span style="' + style + '"></span>';
-                                    innerHtml += '<tr><td>' + span + body + '</td></tr>';
+                                    innerHtml += '<div>' + span + body + '</div>';
                                 });
                                 innerHtml += '</tbody>';
 
@@ -126,22 +127,25 @@ export default {
                             // `this` will be the overall tooltip
                             var position = this._chart.canvas.getBoundingClientRect();
 
-                            // Display, position, and set styles for font
-                            // This is where you will do the actual customization for the tooltips
+                            // This is where you will do most of the styling for the tooltips
 
-                            // Sets opacity for the whole tooltip
+                            // Sets opacity for the whole tooltip area
                             tooltipEl.style.opacity = 1;
+                            // Helps set position for tooltip area
                             tooltipEl.style.position = "absolute";
                             // Sets background color for the tooltip area
                             tooltipEl.style.backgroundColor = "white";
-                            tooltipEl.style.caretSize = 5;
+                            // Settings for caret position?
                             tooltipEl.style.left = position.left + window.pageXOffset + tooltipModel.caretX + 'px';
                             tooltipEl.style.top = position.top + window.pageYOffset + tooltipModel.caretY + 'px';
+                            // Font styling for tooltips?
                             tooltipEl.style.fontFamily = tooltipModel._bodyFontFamily;
                             tooltipEl.style.fontSize = tooltipModel.bodyFontSize + "px";
                             tooltipEl.style.fontStyle = tooltipModel._bodyFontStyle;
+                            // Sets padding for tooltips
                             tooltipEl.style.padding =
                                 tooltipModel.yPadding + "px " + tooltipModel.xPadding + "px";
+                            // Needs documentation
                             tooltipEl.style.pointerEvents = "none";
                             // Sets the width and color of the toolips border
                             tooltipEl.style.border = "3px solid rgb(131, 244, 66)";
