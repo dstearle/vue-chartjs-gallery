@@ -97,6 +97,7 @@ export default {
                             }
 
                             // Set Text
+                            // You can add css/bootstrap to any of the tags for better styling
                             if (tooltipModel.body) {
                                 var titleLines = tooltipModel.title || [];
                                 var bodyLines = tooltipModel.body.map(getBody);
@@ -105,7 +106,7 @@ export default {
 
                                 // Sets the html for the title
                                 titleLines.forEach(function(title) {
-                                    innerHtml += '<div><h4>' + title + '</h4></div>';
+                                    innerHtml += '<div class="m-1"><h4>' + title + '</h4></div>';
                                 });
                                 innerHtml += '</thead><tbody>';
 
@@ -116,7 +117,7 @@ export default {
                                     style += '; border-color: ' + colors.borderColor;
                                     style += '; border-width: 2px';
                                     var span = '<span style="' + style + '"></span>';
-                                    innerHtml += '<div>' + span + body + '</div>';
+                                    innerHtml += '<div class="m-1">' + span + body + '</div>';
                                 });
                                 innerHtml += '</tbody>';
 
