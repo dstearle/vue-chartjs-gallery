@@ -24,3 +24,8 @@
 <strong>Source :</strong>
 
 - gaugeJS https://www.chartjs.org/
+
+<strong>To Do List:</strong>
+
+- Fix HMR error (sockjs related from previous project?)
+- Make better navbar for application
