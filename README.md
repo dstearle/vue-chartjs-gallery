@@ -29,3 +29,4 @@
 
 - Fix HMR error (sockjs related from previous project?)
 - Make better navbar for application
+- Make table of contents for home page
