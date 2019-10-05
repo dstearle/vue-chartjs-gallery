@@ -4,11 +4,11 @@
 
       <div class="card bg-light">
 
-            <h5 class="card-header">Multi Axis Line Chart</h5>
+            <h5 class="card-header">Bi-Weekly Chart</h5>
 
             <div class="card-body p-5">
 
-                <canvas id="myChart3" height="300px" width="800px"></canvas>
+                <canvas id="myChart4" height="300px" width="800px"></canvas>
 
             </div>
       
@@ -28,7 +28,7 @@ export default {
     methods: {
         initializeChart() {
 
-            const ctx = document.getElementById('myChart3').getContext('2d');
+            const ctx = document.getElementById('myChart4').getContext('2d');
             // Creates the gradient for the fill background
             let gradientStroke = ctx.createLinearGradient(0, 250, 0, 100);
                 // More color stops can be added
@@ -169,50 +169,26 @@ export default {
 
                         }],
                         // Allows you to customize the Y axis
-                        yAxes: [
-                            // First Y Axis
-                            {
-                                position: 'left',
-                                scaleLabel: {
-                                    display: true,
-                                    fontStyle: 'bold',
-                                    labelString: 'Invasive Population'
-                                },
-                                gridLines: {
-                                    tickMarkLength: 0,
-                                },
-                                ticks: {
-                                    padding: 15,
-                                    max: 100,
-                                    min: 0,
-                                    stepSize: 10
-                                },
+                        yAxes: [{
+                            
+                            gridLines: {
+                                // Thickness and color for horizontal grid lines
+                                lineWidth: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+                                color: [
+                                        '#73737a', '#73737a', '#73737a', '#73737a',
+                                        '#73737a', '#73737a', '#73737a', '#73737a',
+                                        '#73737a', '#73737a', '#73737a', '#73737a',
+                                ],
+                                tickMarkLength: 0,
                             },
-                            // Second Y Axis
-                            {
-                                position: 'right',
-                                scaleLabel: {
-                                    display: true,
-                                    fontStyle: 'bold',
-                                    labelString: 'Child Mortality Rate'
-                                },
-                                gridLines: {
-                                    tickMarkLength: 0,
-                                },
-                                ticks: {
-                                    padding: 15,
-                                    max: 100,
-                                    min: 0,
-                                    stepSize: 10
-                                },
-                            }
-                        ]
-                    },
+                            ticks: {
+                                padding: 15,
+                                max: 100,
+                                min: 0,
+                                stepSize: 10
+                            },
 
-                    tooltips: {
-
-                        // Disable the default tooltips
-                        enabled: false,
+                        }]
                     }
                 }
             })
