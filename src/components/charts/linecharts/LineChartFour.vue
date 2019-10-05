@@ -21,7 +21,15 @@
                     <!-- Next Day Button -->
                     <div class="row pt-5 justify-content-end">
 
-                        <button type="button" class="btn btn-outline-dark">Next Day</button>
+                        <button 
+                            type="button" 
+                            class="btn btn-outline-dark"
+                            @click="dayChange"
+                        >
+                        
+                            Next Day
+                            
+                        </button>
 
                     </div>
 
@@ -42,7 +50,23 @@ import Chart from "chart.js";
 
 export default {
 
+    data() {
+
+        return {
+
+            ary:  [
+
+                'Monday', 'Tuesday', 'Wedsday', 'Thursday', 'Friday', 'Saturday', 'Sunday',
+                'Monday', 'Tuesday', 'Wedsday', 'Thursday', 'Friday', 'Saturday', 'Sunday',
+
+            ],
+
+        }
+
+    },
+
     methods: {
+
         initializeChart() {
 
             const ctx = document.getElementById('myChart4').getContext('2d');
@@ -58,10 +82,7 @@ export default {
                 // The data for our dataset
                 data: {
                     // Labels for the X axis
-                    labels: [
-                        'Monday', 'Tuesday', 'Wedsday', 'Thursday', 'Friday', 'Saturday', 
-                        'Monday', 'Tuesday', 'Wedsday', 'Thursday', 'Friday', 'Saturday',
-                    ],
+                    labels: this.ary,
                     datasets: [{
                         label: 'Compsognathus Population',
                         backgroundColor: gradientStroke,
@@ -209,13 +230,29 @@ export default {
                             },
 
                         }]
+
                     }
+
                 }
+
             })
-        }
+
+        },
+
+        // Method that changes the X axis labels
+        dayChange() {
+
+            // Takes the first element from the array and pushes it to the end of the array
+            this.ary.push(this.ary.shift());
+            console.log("yo")
+
+        },
+
     },
     mounted() {
+
         this.initializeChart();
+
     },
     
 };
