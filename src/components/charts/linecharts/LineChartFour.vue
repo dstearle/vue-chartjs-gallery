@@ -4,11 +4,28 @@
 
       <div class="card bg-light">
 
+            <!-- Card Title -->
             <h5 class="card-header">Bi-Weekly Chart</h5>
 
             <div class="card-body p-5">
 
-                <canvas id="myChart4" height="300px" width="800px"></canvas>
+                <div class="col">
+
+                    <!-- Chart -->
+                    <div class="row">
+
+                        <canvas id="myChart4" height="300px" width="800px"></canvas>
+
+                    </div>
+
+                    <!-- Next Day Button -->
+                    <div class="row pt-5 justify-content-end">
+
+                        <button type="button" class="btn btn-outline-dark">Next Day</button>
+
+                    </div>
+
+                </div>
 
             </div>
       
