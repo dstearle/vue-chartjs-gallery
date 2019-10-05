@@ -95,8 +95,12 @@ export default {
             })
         }
     },
+
     mounted() {
+
+        // Runs the method to render the chart
         this.initializeChart();
+        
     },
     
 };
