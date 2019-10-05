@@ -42,9 +42,8 @@ export default {
                 data: {
                     // Labels for the X axis
                     labels: [
-                        'January', 'February', 'March', 'April', 
-                        'May', 'June', 'July', 'August',
-                        'September', 'October', 'November', 'December'
+                        'Monday', 'Tuesday', 'Wedsday', 'Thursday', 'Friday', 'Saturday', 
+                        'Monday', 'Tuesday', 'Wedsday', 'Thursday', 'Friday', 'Saturday',
                     ],
                     datasets: [{
                         label: 'Compsognathus Population',
@@ -173,19 +172,23 @@ export default {
                             
                             gridLines: {
                                 // Thickness and color for horizontal grid lines
-                                lineWidth: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+                                lineWidth: [
+                                    1, 1, 1, 1, 1,
+                                    1, 1, 1, 1, 1,
+                                    1, 1, 1, 1, 1
+                                ],
                                 color: [
-                                        '#73737a', '#73737a', '#73737a', '#73737a',
-                                        '#73737a', '#73737a', '#73737a', '#73737a',
-                                        '#73737a', '#73737a', '#73737a', '#73737a',
+                                        '#73737a', '#73737a', '#73737a', '#73737a', '#73737a', 
+                                        '#73737a', '#73737a', '#73737a', '#73737a', '#73737a', 
+                                        '#73737a', '#73737a', '#73737a', '#73737a', '#73737a',
                                 ],
                                 tickMarkLength: 0,
                             },
                             ticks: {
                                 padding: 15,
-                                max: 100,
+                                max: 1500,
                                 min: 0,
-                                stepSize: 10
+                                stepSize: 150
                             },
 
                         }]
