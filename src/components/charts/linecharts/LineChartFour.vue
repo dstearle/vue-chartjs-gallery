@@ -54,7 +54,14 @@ export default {
 
         return {
 
-            ary:  [
+            // Array to hold values for the chart
+            dinoSightingsArray: [
+
+                null, null, null, null, null, null, null, 
+                null, null, null, null, null, null, 20,
+            ],
+            // Array to hold the labels for the chart
+            weekDayArray:  [
 
                 'Monday', 'Tuesday', 'Wedsday', 'Thursday', 'Friday', 'Saturday', 'Sunday',
                 'Monday', 'Tuesday', 'Wedsday', 'Thursday', 'Friday', 'Saturday', 'Sunday',
@@ -82,12 +89,12 @@ export default {
                 // The data for our dataset
                 data: {
                     // Labels for the X axis
-                    labels: this.ary,
+                    labels: this.weekDayArray,
                     datasets: [{
                         label: 'Compsognathus Population',
                         backgroundColor: gradientStroke,
                         borderColor: 'rgb(131, 244, 66)',
-                        data: [0, 10, 5, 2, 20, 30, 45, 25, 38, 60, 65, 89]
+                        data: this.dinoSightingsArray
                     }]
                 },
                 // Configure your chart options here
@@ -224,9 +231,9 @@ export default {
                             },
                             ticks: {
                                 padding: 15,
-                                max: 1500,
+                                max: 100,
                                 min: 0,
-                                stepSize: 150
+                                stepSize: 20
                             },
 
                         }]
@@ -243,7 +250,10 @@ export default {
         dayChange() {
 
             // Takes the first element from the array and pushes it to the end of the array
-            this.ary.push(this.ary.shift());
+            this.dinoSightingsArray.push(this.dinoSightingsArray.shift());
+            // Takes the first element from the array and pushes it to the end of the array
+            this.weekDayArray.push(this.weekDayArray.shift());
+            // Renders the chart again with new info
             this.initializeChart();
 
         },
