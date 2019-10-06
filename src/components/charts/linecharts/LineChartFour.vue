@@ -249,9 +249,13 @@ export default {
         // Method that changes the X axis labels
         dayChange() {
 
-            // Takes the first element from the array and pushes it to the end of the array
-            this.dinoSightingsArray.push(this.dinoSightingsArray.shift());
-            // Takes the first element from the array and pushes it to the end of the array
+            // Randomizes the price for each available shrimp between their minimum and maximum prices
+            let newDaySightings = Math.round((Math.random() * (100 - 0 + 1)) + 0);
+            // Removes the first element in the dinoSightings array
+            this.dinoSightingsArray.shift();
+            // Pushes a new element into the dinoSightings array
+            this.dinoSightingsArray.push(newDaySightings);
+            // Takes the first element from the labels array and pushes it to the end of the array
             this.weekDayArray.push(this.weekDayArray.shift());
             // Renders the chart again with new info
             this.initializeChart();
