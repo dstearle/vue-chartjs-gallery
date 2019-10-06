@@ -244,11 +244,12 @@ export default {
 
             // Takes the first element from the array and pushes it to the end of the array
             this.ary.push(this.ary.shift());
-            console.log("yo")
+            this.initializeChart();
 
         },
 
     },
+
     mounted() {
 
         this.initializeChart();
