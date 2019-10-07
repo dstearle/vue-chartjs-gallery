@@ -61,8 +61,8 @@
 
                 // Array to hold the labels for the chart
                 weekDayArray:  [
-                    'Monday', 'Tuesday', 'Wedsday', 'Thursday', 'Friday', 'Saturday', 'Sunday',
-                    'Monday', 'Tuesday', 'Wedsday', 'Thursday', 'Friday', 'Saturday', 'Sunday',
+                    'Sunday', 'Monday', 'Tuesday', 'Wedsday', 'Thursday', 'Friday', 'Saturday',
+                    'Sunday', 'Monday', 'Tuesday', 'Wedsday', 'Thursday', 'Friday', 'Saturday',
                 ],
 
             }
@@ -189,6 +189,16 @@
                             xAxes: [{
                                 
                                 gridLines: {
+                                    lineWidth: [
+                                        1, 1, 1, 1, 1,
+                                        1, 3, 1, 1, 1,
+                                        1, 1, 1, 3,
+                                    ],
+                                    color: [
+                                            '#73737a', '#73737a', '#73737a', '#73737a', '#73737a', 
+                                            '#73737a', '#73737a', '#73737a', '#73737a', '#73737a', 
+                                            '#73737a', '#73737a', '#73737a', '#73737a', '#73737a',
+                                    ],
                                     tickMarkLength: 0,
                                 },
                                 ticks: {
@@ -202,13 +212,9 @@
                                     // Thickness and color for horizontal grid lines
                                     lineWidth: [
                                         1, 1, 1, 1, 1,
-                                        1, 1, 1, 1, 1,
-                                        1, 1, 1, 1, 1
                                     ],
                                     color: [
                                             '#73737a', '#73737a', '#73737a', '#73737a', '#73737a', 
-                                            '#73737a', '#73737a', '#73737a', '#73737a', '#73737a', 
-                                            '#73737a', '#73737a', '#73737a', '#73737a', '#73737a',
                                     ],
                                     tickMarkLength: 0,
                                 },
