@@ -29,7 +29,7 @@
 import ChartOne from './LineChartOne.vue';
 import ChartTwo from './LineChartTwo.vue';
 import ChartThree from './LineChartThree.vue';
-import ChartFour from './LineChartFour.vue';
+import ChartFour from './lineChartFour/LineChartFour.vue';
 
 
 export default {

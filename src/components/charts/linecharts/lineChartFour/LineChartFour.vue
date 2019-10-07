@@ -45,8 +45,10 @@
 
 <script>
 
-    // Imports the different types of charts from the package";
+    // Imports the different types of charts from the package
     import Chart from "chart.js";
+    // Imports the data to be used in the chart
+    import DinoData from "./DinoData.js";
 
     export default {
 
@@ -74,26 +76,27 @@
 
             // All that jazz to make a new chart
             initializeChart() {
+
                 const ctx = document.getElementById('myChart4').getContext('2d');
+                
                 // Creates the gradient for the fill background
                 let gradientStroke = ctx.createLinearGradient(0, 250, 0, 100);
                     // More color stops can be added
                     gradientStroke.addColorStop(0, "rgb(0, 7, 112, 0.3)");
                     gradientStroke.addColorStop(1, "rgb(0, 7, 112, 0.8)");
+
                 this.chart = new Chart(ctx, {
+
                     // The type of chart we want to create
                     type: 'line',
+
                     // The data for our dataset
                     data: {
                         // Labels for the X axis
                         labels: this.weekDayArray,
-                        datasets: [{
-                            label: 'Nasutoceratops Sightings',
-                            backgroundColor: gradientStroke,
-                            borderColor: 'rgb(0, 7, 112)',
-                            data: this.dinoSightingsArray
-                        }]
+                        datasets: DinoData
                     },
+
                     // Configure your chart options here
                     options: {
                         maintainAspectRatio: false,
