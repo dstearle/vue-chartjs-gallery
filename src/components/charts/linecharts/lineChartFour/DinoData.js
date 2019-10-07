@@ -22,7 +22,7 @@ export default [
             borderColor: 'rgb(186, 6, 6)',
             data: [
                 null, null, null, null, null, null, null,
-                null, null, null, null, null, null, 10
+                null, null, null, null, null, null, 20
             ]
         },
         

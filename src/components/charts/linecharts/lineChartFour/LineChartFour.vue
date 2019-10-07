@@ -227,12 +227,11 @@
             // Method that changes the X axis labels and insert new data
             dayChange() {
 
-                console.log(this.chart.data.datasets[0].data)
-                // Randomizes the price for each available shrimp between their minimum and maximum prices
-                let newDaySightings = Math.round((Math.random() * (100 - 0 + 1)) + 0);
-
                 // Retrieves the dataset values for each item
                 for(let i = 0; i < this.dinoSightData.length; i++) {
+
+                    // Randomizes the price for each available shrimp between their minimum and maximum prices
+                    let newDaySightings = Math.round((Math.random() * (100 - 0 + 1)) + 0);
 
                     // Removes the first element in the dinoSightings array
                     this.chart.data.datasets[i].data.shift();
