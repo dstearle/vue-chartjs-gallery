@@ -57,10 +57,7 @@
             return {
 
                 // Array to hold values for the chart
-                dinoSightingsArray: [
-                    null, null, null, null, null, null, null, 
-                    null, null, null, null, null, null, 20,
-                ],
+                dinoSightData: DinoData,
 
                 // Array to hold the labels for the chart
                 weekDayArray:  [
@@ -230,13 +227,19 @@
             // Method that changes the X axis labels and insert new data
             dayChange() {
 
+                console.log(this.chart.data.datasets[0].data)
                 // Randomizes the price for each available shrimp between their minimum and maximum prices
                 let newDaySightings = Math.round((Math.random() * (100 - 0 + 1)) + 0);
 
-                // Removes the first element in the dinoSightings array
-                this.dinoSightingsArray.shift();
-                // Pushes a new element into the dinoSightings array
-                this.dinoSightingsArray.push(newDaySightings);
+                // Retrieves the dataset values for each item
+                for(let i = 0; i < this.dinoSightData.length; i++) {
+
+                    // Removes the first element in the dinoSightings array
+                    this.chart.data.datasets[i].data.shift();
+                    // Pushes a new element into the dinoSightings array
+                    this.chart.data.datasets[i].data.push(newDaySightings);
+                    
+                }
 
                 // Takes the first element from the labels array and pushes it to the end of the array
                 this.weekDayArray.push(this.weekDayArray.shift());
