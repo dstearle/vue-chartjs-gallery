@@ -251,7 +251,7 @@
 
                 // Renders the chart again with new info
                 this.chart.update();
-
+                
             },
 
         },

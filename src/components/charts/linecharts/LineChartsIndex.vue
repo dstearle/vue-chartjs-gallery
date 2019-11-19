@@ -20,6 +20,10 @@
 
         <br>
 
+        <app-chart-five></app-chart-five>
+
+        <br>
+
     </div>
 
 </template>
@@ -30,6 +34,7 @@ import ChartOne from './LineChartOne.vue';
 import ChartTwo from './LineChartTwo.vue';
 import ChartThree from './LineChartThree.vue';
 import ChartFour from './lineChartFour/LineChartFour.vue';
+import ChartFive from './LineChartFive.vue';
 
 
 export default {
@@ -40,6 +45,7 @@ export default {
         appChartTwo: ChartTwo,
         appChartThree: ChartThree,
         appChartFour: ChartFour,
+        appChartFive: ChartFive,
 
     },
     
