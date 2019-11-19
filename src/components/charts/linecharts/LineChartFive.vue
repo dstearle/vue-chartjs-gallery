@@ -21,15 +21,22 @@
                     <!-- Convert Button -->
                     <div class="row pt-5 justify-content-end">
 
-                        <button 
-                            type="button" 
-                            class="btn btn-outline-dark"
-                            @click="convertCanvas()"
+                        <a 
+                            id="download"
+                            download="image.png"
                         >
-                        
-                            Convert Canvas
+
+                            <button 
+                                type="button" 
+                                class="btn btn-outline-dark"
+                                @click="convertCanvas()"
+                            >
                             
-                        </button>
+                                Convert Canvas
+                                
+                            </button>
+
+                        </a>
 
                     </div>
 
@@ -115,24 +122,14 @@ export default {
         // Method that converts the canvas element into an image
         convertCanvas() {
 
-            // Retrieves the dataset values for each item
-            for(let i = 0; i < this.dinoSightData.length; i++) {
+            // References the anchor tag wrapped around the canvas element
+            var download = document.getElementById("download");
 
-                // Randomizes the price for each available shrimp between their minimum and maximum prices
-                let newDaySightings = Math.round((Math.random() * (100 - 0 + 1)) + 0);
-
-                // Removes the first element in the dinoSightings array
-                this.chart.data.datasets[i].data.shift();
-                // Pushes a new element into the dinoSightings array
-                this.chart.data.datasets[i].data.push(newDaySightings);
-                
-            }
-
-            // Takes the first element from the labels array and pushes it to the end of the array
-            this.weekDayArray.push(this.weekDayArray.shift());
-
-            // Renders the chart again with new info
-            this.chart.update();
+            // Grabs the canvas element, use toDataURL then replaces its file name with "image"
+            var image = document.getElementById("myChart5").toDataURL("image/png").replace("image/png", "image/octet-stream");
+            
+            // Downloads the image
+            download.setAttribute("href", image);
             
         },
 
