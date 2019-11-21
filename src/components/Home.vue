@@ -1,22 +1,27 @@
 <template>
     
-    <div class="py-5">
+    <div class="col py-5">
 
-        <h1>Table Of Contents:</h1>
+        <h3>Table Of Contents:</h3>
 
         <hr>
 
-        <h3>Line Charts</h3>
+        <!-- Line Charts -->
+        <h6>Line Charts</h6>
 
-        <p>Basic Line Chart</p>
+        <ul>
 
-        <p>Mulitple Line Chart</p>
+            <li>Basic Line Chart</li>
 
-        <p>Mulitple Axis Line Chart</p>
+            <li>Mulitple Line Chart</li>
 
-        <p>Bi Weekly Line Chart</p>
+            <li>Mulitple Axis Line Chart</li>
 
-        <p>Canvas Conversion</p>
+            <li>Bi Weekly Line Chart</li>
+
+            <li>Canvas Conversion</li>
+
+        </ul>
         
     </div>
     
